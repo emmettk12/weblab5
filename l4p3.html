@@ -3,7 +3,7 @@
 	<title>This is the order total</title>
 </head>
 <body>
-	<form action = "/formtest.php">
+	<form action = "/formtest.php" id="emmett">
 		Chisels:<br/>
 		<input type ="text" name = "Chisels" value="Chisels"/>
 		<br>
@@ -54,11 +54,11 @@
 		</form>
 		
 	<script>
-	document.getElementById("")
-	function sum() {
-    	var quantityChiselsNumber = parseInt(document.getElementById('ChiselsNumber').value);
-		var quantityPitchForkNumber = parseInt(document.getElementById('PitchForkNumber').value);
-		var quantitySawNumber = parseInt(document.getElementById('SawNumber').value);
+	document.ElementById("emmett").eventListener("submit",sum);
+	var sum = function() {
+    	var quantityChiselsNumber = parseInt(document.getElementByName('ChiselsNumber').value);
+		var quantityPitchForkNumber = parseInt(document.getElementByName('PitchForkNumber').value);
+		var quantitySawNumber = parseInt(document.getElementByName('SawNumber').value);
     	var Chiselstotal = quantityChiselsNumber*10 ;
     	var PitchForkstotal = quantityPitchForkNumber*15 ;
     	var Sawtotal = quantitySawNumber*20 ;
@@ -67,6 +67,7 @@
     	var totalWithTaxes= total*1.07
     	alert("This is your total "+totalWithTaxes);    
 	};
+	sum()
 </script>
 </body>
 </html>
