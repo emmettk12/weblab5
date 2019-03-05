@@ -54,8 +54,8 @@
 		</form>
 		
 	<script>
-	document.ElementById("emmett").eventListener("submit",sum);
-	var sum = function() {
+	document.ElementById("emmett").eventListener("submit",function);
+		var sum = function(e) {
     	var quantityChiselsNumber = parseInt(document.getElementByName('ChiselsNumber').value);
 		var quantityPitchForkNumber = parseInt(document.getElementByName('PitchForkNumber').value);
 		var quantitySawNumber = parseInt(document.getElementByName('SawNumber').value);
