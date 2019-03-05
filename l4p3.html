@@ -3,11 +3,58 @@
 	<title>This is the order total</title>
 </head>
 <body>
+	<form action = "/formtest.php">
+		Chisels:<br/>
+		<input type ="text" name = "Chisels" value="Chisels"/>
+		<br>
+		Number of Chisels:<br/>
+		<input type= "text" name = "ChiselsNumber" value="0"/>
+		<br>
+		PitchFork:<br/>
+		<input type ="text" name = "PitchFork" value="PitchFork"/>
+		<br>
+		Number of PitchFork:<br/>
+		<input type= "text" name = "PitchForkNumber" value="0"/>
+		<br/>
+		Saw:<br/>
+		<input type ="text" name = "Saw" value="Saw"/>
+		<br>
+		Number of Saw:<br/>
+		<input type= "text" name = "SawNumber" value="0"/>
+		<br/>
+		First Name:<br/>
+		<input type ="text" name = "firstName" value=""/>
+		<br>
+		Last Name:<br/>
+		<input type ="text" name = "lastName" value=""/>
+		<br>
+		Address:<br/>
+		<input type= "text" name = "address" value=""/>
+		<br>
+		City:<br/>
+		<input type= "text" name = "city" value=""/>
+		<br>
+		State:<br/>
+		<input type ="text" name = "zipCode" value=""/>
+		<br>
+		Zip Code:<br/>
+		<input type= "text" name = "state" value=""/>
+		<br>
+		
+		<p>
+		Choose your method of payment:
+		</p>
+		<br/>
+		<input type="radio" name="payment" value="Visa">Visa<br/>
+		<input type="radio" name="payment" value="MasterCard">MasterCard<br/>
+		<input type="radio" name="payment" value="American Express">American Express<br/>
+		
+		<br/>
+		<input type ="submit" value = "Submit">
+		</form>
+		
 	<script>
-	$.get('l2p3.html', null, function(text){
-	
-    //alert($(text).find('#name'));
-});
+	document.getElementById("")
 	function sum() {
     	var quantityChiselsNumber = parseInt(document.getElementById('ChiselsNumber').value);
 		var quantityPitchForkNumber = parseInt(document.getElementById('PitchForkNumber').value);
@@ -17,8 +64,9 @@
     	var Sawtotal = quantitySawNumber*20 ;
 
     	var total = Chiselstotal + PitchForkstotal+ Sawtotal;
-    	alert("This is your total "+total);    
-}
+    	var totalWithTaxes= total*1.07
+    	alert("This is your total "+totalWithTaxes);    
+	};
 </script>
 </body>
 </html>
