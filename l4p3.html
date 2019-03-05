@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>This is the order total</title>
+</head>
+<body>
+	<script>
+	$.get('l2p3.html', null, function(text){
+	
+    //alert($(text).find('#name'));
+});
+	function sum() {
+    	var quantityChiselsNumber = parseInt(document.getElementById('ChiselsNumber').value);
+		var quantityPitchForkNumber = parseInt(document.getElementById('PitchForkNumber').value);
+		var quantitySawNumber = parseInt(document.getElementById('SawNumber').value);
+    	var Chiselstotal = quantityChiselsNumber*10 ;
+    	var PitchForkstotal = quantityPitchForkNumber*15 ;
+    	var Sawtotal = quantitySawNumber*20 ;
+
+    	var total = Chiselstotal + PitchForkstotal+ Sawtotal;
+    	alert()total;
+
+    	document.getElementById('result').innerHTML=total;
+    	document.getElementById('result').value=total;      
+}
+</script>
+</body>
+</html>
